@@ -1,6 +1,7 @@
 import { useState } from "react";
 import clsx from "clsx";
 import Layout from "../../components/layout";
+import Link from "next/link";
 
 export default function Home() {
   const [buttonSize, setButtonSize] = useState<boolean>(true);
@@ -22,6 +23,9 @@ export default function Home() {
             >
               Button
             </button>
+            <h2>
+              <Link href="/anotherPage">To another Page</Link>
+            </h2>
           </div>
         </section>
       </main>
