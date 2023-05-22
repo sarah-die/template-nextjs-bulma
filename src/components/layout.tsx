@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from './layout.module.css'
+// import styles from '../styles/_layout.scss'
 import Link from 'next/link'
 
 const name = "[Your Name]";
@@ -13,7 +13,7 @@ export default function Layout({
   home?: boolean;
 }) {
   return (
-    <div>
+    <div className="layout">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -31,7 +31,10 @@ export default function Layout({
         {/*Bulma requires this*/}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <header className={styles.header}>
+      <header
+          // ToDo
+          className="header"
+      >
         {home ? (
           <>
             <h1>{name}</h1>
@@ -50,7 +53,10 @@ export default function Layout({
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div
+            // ToDo
+            className="backToHome"
+        >
           <Link href="/">← Back to home</Link>
         </div>
       )}
